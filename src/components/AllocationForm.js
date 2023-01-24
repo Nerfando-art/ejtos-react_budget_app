@@ -15,6 +15,11 @@ const AllocationForm = (props) => {
                 setCost("");
                 return;
             }
+            if(cost < remaining) {
+                alert("you cannot reduce the budget value lower than the spending £"+remaining);
+                setCost("");
+                return;
+            }
 
         const expense = {
             name: name,
